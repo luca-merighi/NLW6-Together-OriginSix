@@ -1,0 +1,90 @@
+#contact .content .text h3 {
+    font: 700 1.5rem 'Poppins', sans-serif;
+    color: var(--dark-green);
+    margin-bottom: 1rem;
+    width: 80%;    
+}
+
+#contact .content .text p {
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--grey);
+    margin-bottom: 2rem;
+}
+
+#contact .content .text .contact-button {
+    background-color: var(--bg-green);
+    padding: 1rem;
+    border-radius: 0.25rem;
+
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--ice);
+    transition: background 0.3s;
+}
+
+#contact .content .text .contact-button:hover {
+    background-color: var(--green-hover);
+}
+
+#contact .content .text .contact-button:focus {
+    background-color: var(--green-hover);   
+    border: 2px solid var(--dark-green);
+    outline: none;
+}
+
+#contact .content .text .contact-button img {
+    width: 1.5rem;
+}
+
+#contact .content .contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    list-style: none;
+}
+
+#contact .content .contacts-list li {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#contact .content .contacts-list li span {
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--grey);
+}
+
+@media(min-width: 768px) {
+    #contact {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+
+    #contact .content .text {
+        width: 75%;
+    }
+}
+
+@media(min-width: 1024px) {
+    #contact .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+@media(min-width: 1366px) {
+    #contact .content {
+        justify-content: space-around;
+    }
+
+    #contact .content .text {
+        max-width: 25rem;
+    }
+}

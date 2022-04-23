@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --header-height: 4.5rem;
+ 
+    --white: #FFFFFF; 
+    --ice: #F9F9F9;
+
+    --light-grey: #e4e4e4;
+    --grey: #767676;
+    --grey-transparent: #76767626;
+    
+    --dark-green: #0F241D;
+    --bg-green: #69B99D;
+    --green-hover: #58a88c;
+    --light-green: #CCF4E6;
+     
+    --hue: 159;
+
+    --base-color: hsl(var(--hue) 36% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: #fafafa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--ice);
+    /* font-family: 'Poppins', sans-serif; */
+}
+
+body.lock-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+main {
+    margin-top: calc(4.5rem + 1rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Divisor de Sections */
+.divider-left {
+    height: 2px;
+    background: 
+        linear-gradient(
+            270deg, 
+            #69B99D 0%, 
+            #ccf4e657 100%);
+}
+
+.divider-right {
+    height: 2px;
+    background: 
+        linear-gradient(
+                270deg, 
+                #69B99D 0%, 
+                #ccf4e657 100%);
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+/* Back to Top Button */
+.back-to-top-button {
+    position: fixed;
+    z-index: 3;
+    bottom: 1rem;
+    right: 1rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    background-color: var(--bg-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 2px solid var(--dark-green);
+
+    transform: translateY(100%);
+    transition: background 0.3s, transform 0.3s, opacity 0.3s, visibility 0.3s;
+}
+
+.back-to-top-button.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+.back-to-top-button:hover {
+    background-color: var(--green-hover);
+}
+
+.back-to-top-button:focus {
+    background-color: var(--green-hover);
+    border: 2px solid var(--grey);
+    outline: none;
+}
+
+@media(min-width: 768px) {
+    main {
+        margin-top: calc(4.5rem + 4rem);
+    }
+}

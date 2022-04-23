@@ -1,0 +1,116 @@
+.header {
+    background-color: var(--ice);
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    border-bottom: 2px solid var(--light-grey);
+}
+
+.header.shadow {
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.25);
+}
+
+.header .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.header .nav .logo {
+    color: var(--dark-green);
+    font: 700 1.5rem 'Poppins', sans-serif;
+}
+
+.header .nav .logo span {
+    color: var(--bg-green);
+}
+
+.header .nav .logo:focus {
+    outline: 2px solid var(--bg-green);
+    border-radius: 0.25rem;
+}
+
+.header .nav .menu-links {
+    display: none;
+}
+
+.header .nav .toggle-sidebar-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 1.875rem;
+    height: 1.875rem;
+}
+
+.header .nav .toggle-sidebar-icons:hover {
+    background-color: var(--grey-transparent);
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.header .nav .toggle-sidebar-icons:focus {
+    outline: 2px solid var(--bg-green);
+    border-radius: 0.25rem;
+    background-color: var(--grey-transparent);
+}
+
+.open-sidebar-icon,
+.close-sidebar-icon {
+    width: 100%;
+    position: absolute;
+    transition: 0.3s;
+    padding: 5px;
+}
+
+.open-sidebar-icon.hide,
+.close-sidebar-icon.hide {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-100%);
+}
+
+@media(min-width: 768px) {
+    .header .nav {
+        padding: 1rem 2.5rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    .header .nav .toggle-sidebar-icons {
+        display: none;
+    }
+
+    .header .nav .menu-links {
+        list-style: none;
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .menu-links li a {
+        font: 500 1.15rem 'DM Sans', sans-serif;
+        color: var(--dark-green);
+        padding: 0.5rem 0.875rem;
+        border-radius: 0.25rem;
+        border: 2px solid var(--ice);
+    }
+
+    .menu-links li a.active {
+        color: var(--bg-green);
+    }
+
+    .menu-links li a:hover {
+        color: var(--bg-green);
+        background-color: var(--grey-transparent);
+    }
+
+    .menu-links li a:focus {
+        border: 2px solid var(--bg-green);
+        outline: none;
+        color: var(--bg-green);
+        background-color: var(--grey-transparent);
+    }
+}

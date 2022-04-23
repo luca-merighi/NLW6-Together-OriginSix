@@ -1,0 +1,84 @@
+#about {
+    background-color: var(--white);
+}
+
+#about .content .figure {
+    position: relative;
+}
+
+#about .content .figure::before {
+    content: '';
+    background-color: var(--light-green);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -8.3%;
+    left: -33%;
+    z-index: 0;
+    border-radius: 0.25rem;
+}
+
+#about .content .figure .img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#about .content .text {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#about .content .text h3 {
+    font: 700 1.5rem 'Poppins', sans-serif;
+    color: var(--dark-green);
+}
+
+#about .content .text p {
+    font: 400 1rem 'DM Sans', sans-serif;
+    color: var(--grey);
+    line-height: 1.875rem;
+}
+
+@media(min-width: 768px) {
+    #about .content .text {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+    }
+}
+
+@media(min-width: 1024px) {
+    #about .content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #about .content .figure::before {
+        width: 100%;
+    }
+
+    #about .content .figure .img {
+        width: 22rem;
+        border-radius: 0 0.25rem 0.25rem 0;
+    }
+
+    #about .content .text {
+        margin: 0;
+        max-width: 25rem;
+    }
+}
+
+@media(min-width: 1366px) {
+    #about .content .figure .img {
+        width: 30rem;
+    }
+
+    #about .content .text {
+        max-width: 35rem;
+    }
+}
