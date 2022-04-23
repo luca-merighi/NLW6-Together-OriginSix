@@ -9,4 +9,4 @@ Evento @Rocketseat Next Level Week Together 6ª Edição - Junho de 2021
 - **ScrollReveal**
 
 
-### [Link para a Página]( "beautysalon.")
+### [Link para a Página](https://luca-merighi.github.io/NLW6-Together-OriginSix/ "beautysalon.")
