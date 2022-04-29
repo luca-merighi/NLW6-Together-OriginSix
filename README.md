@@ -1,4 +1,4 @@
-# NLW6 - Together - OriginSix
+# NLW6 - Together - Origin
 Evento @Rocketseat Next Level Week Together 6ª Edição - Junho de 2021
 
 ### Site Construído com:
